@@ -26,9 +26,7 @@ public enum Operation {
             .collect(toMap(Object::toString,e->e));
 
     public  static Optional<Operation> fromString(String symbol){
-        Operation value = stringToEnum.get(symbol);
-        Optional<Operation> operation = Optional.ofNullable(value);
-        return operation;
+        return Optional.ofNullable(stringToEnum.get(symbol));
     }
 
 }
